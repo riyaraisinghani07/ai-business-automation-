@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #FF6B00;
+    --color-primary-light: #FF8C38;
+    --color-primary-dark: #E05A00;
+    --color-navy: #0F172A;
+    --color-navy-light: #1E293B;
+    --color-navy-lighter: #334155;
+  }
+
+  body {
+    @apply antialiased text-slate-800;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#FF6B00] hover:bg-[#E05A00] text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply border-2 border-[#FF6B00] text-[#FF6B00] hover:bg-[#FF6B00] hover:text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium py-2 px-4 rounded-lg transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .card-compact {
+    @apply bg-white rounded-lg border border-slate-200 p-4;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-[#FF6B00] focus:ring-2 focus:ring-[#FF6B00]/20 outline-none transition-all duration-200 text-slate-800 placeholder-slate-400;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all duration-200 text-sm font-medium;
+  }
+
+  .sidebar-link-active {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#FF6B00]/10 text-[#FF6B00] font-medium text-sm;
+  }
+
+  .kpi-card {
+    @apply card p-5;
+  }
+
+  .badge-success {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800;
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800;
+  }
+
+  .badge-danger {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800;
+  }
+
+  .badge-info {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800;
+  }
+
+  .chat-bubble-user {
+    @apply bg-[#FF6B00] text-white rounded-2xl rounded-br-md px-4 py-3 max-w-[80%];
+  }
+
+  .chat-bubble-ai {
+    @apply bg-slate-100 text-slate-800 rounded-2xl rounded-bl-md px-4 py-3 max-w-[80%];
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 3px;
+  }
+}
